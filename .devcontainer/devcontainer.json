@@ -1,5 +1,8 @@
 {
   "name": "Go Python C++",
+  "remoteEnv": {
+    "PATH": "/usr/bin:${containerEnv:PATH}"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -9,6 +12,7 @@
         "formulahendry.code-runner"
       ],
       "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3",
         "code-runner.runInTerminal": true,
         "code-runner.saveFileBeforeRun": true,
         "code-runner.executorMap": {

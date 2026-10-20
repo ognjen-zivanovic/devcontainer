@@ -10,4 +10,6 @@ print(matrix.T)
 x = np.linspace(-10, 10, 100)
 y = np.sin(x)
 plt.plot(x, y)
+
+plt.savefig("plot.png")
 plt.show()
