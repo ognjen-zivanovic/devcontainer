@@ -1,6 +1,5 @@
 {
   "name": "Go Python C++",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "customizations": {
     "vscode": {
       "extensions": [
