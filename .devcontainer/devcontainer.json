@@ -6,9 +6,19 @@
       "extensions": [
         "golang.go",
         "ms-python.python",
-        "ms-vscode.cpptools"
-      ]
+        "ms-vscode.cpptools",
+        "formulahendry.code-runner"
+      ],
+      "settings": {
+        "code-runner.runInTerminal": true,
+        "code-runner.saveFileBeforeRun": true,
+        "code-runner.executorMap": {
+          "python": "python3 -u",
+          "go": "bash \"$workspaceRoot/.vscode/run-go.sh\" \"$fullFileName\"",
+          "cpp": "cd $dir && g++ -std=c++14 $fileName -o .bin/$fileNameWithoutExt && ./.bin/$fileNameWithoutExt"
+        }
+      }
     }
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y g++ && python3 -m pip install --break-system-packages numpy matplotlib pandas"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y g++ python3-numpy python3-matplotlib python3-pandas"
 }
